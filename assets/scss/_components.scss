@@ -1,0 +1,385 @@
+@import "./variables";
+
+.btn {
+  border: none;
+  border-radius: 0.25rem;
+  padding: 12px 20px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: $color-secondary;
+  transition: all 500ms;
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+.btn-secondary   {
+  background-color: $bg-secondary;
+  color: $color-secondary;
+  transition: all 500ms;
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+.btn-transparent {
+  background-color: transparent;
+  color: $color-secondary;
+}
+
+.btn-after {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 1px;
+    height: 70%;
+    background-color: $color-secondary;
+  }
+}
+.header__tags-item {
+  padding: 8px;
+  font-size: 0.8rem;
+  background-color: rgba($color-secondary, 0.3);
+  border-radius: 5px;
+  border: 1px solid $color-secondary;
+  color: $color-secondary;
+  cursor: pointer;
+  transition: all 200ms;
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+}
+.card {
+  overflow: hidden;
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.1);
+
+  .card_image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .card__title {
+    font-size: 1rem;
+    color: $color-primary;
+  }
+  .card__des {
+    font-size: 0.8rem;
+  }
+  .card__stars {
+    padding: 20px 0;
+    span {
+      color: yellow;
+      &:nth-child(5) {
+        color: gray;
+      }
+      &:nth-child(6) {
+        color: black;
+        font-size: 0.7rem;
+        color: gray;
+      }
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .card__heart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .card__body {
+    padding: 10px;
+    div {
+      padding: 10px 0;
+    }
+  }
+  .heart {
+    background-color: $color-gray;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 200ms;
+    color: $color-primary;
+    &:hover {
+      background-color: red;
+      color: $color-secondary;
+    }
+  }
+}
+.card-one {
+  overflow: hidden;
+  background-color: $color-secondary;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: row;
+  border-radius: 5px;
+  box-shadow: 0 2px 20px -2px rgba(0, 0, 0, 0.1);
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+  .card_image {
+    width: 40%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .card__title {
+    font-size: 1rem;
+    color: $color-primary;
+  }
+  .card__des {
+    font-size: 0.8rem;
+  }
+  .card__stars {
+    padding: 20px 0;
+    span {
+      color: yellow;
+      &:nth-child(5) {
+        color: gray;
+      }
+      &:nth-child(6) {
+        color: black;
+        font-size: 0.7rem;
+        color: gray;
+      }
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .card__heart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .card__body {
+    padding: 10px;
+    width: 60%;
+    div {
+      padding: 9px 0;
+    }
+  }
+  .heart {
+    background-color: $color-gray;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 200ms;
+    color: $color-primary;
+    &:hover {
+      background-color: red;
+      color: $color-secondary;
+    }
+  }
+}
+
+.category__item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  div {
+    padding: 10px 0;
+  }
+  span {
+    background-color: red;
+    background-color: $color-gray;
+    padding: 3px 20px;
+    border-radius: 50px;
+  }
+  svg {
+    width: 45px;
+    height: 45px;
+    color: $color-primary;
+  }
+  transition: all 700ms;
+
+  &:hover {
+    background-color: $color-primary;
+    transform: scale(1.05);
+    svg {
+      color: $color-secondary;
+    }
+    p {
+      color: $color-secondary;
+    }
+    span {
+      background-color: #046df4;
+      color: $color-secondary;
+    }
+  }
+}
+
+.badge {
+  padding: 5px 10px;
+  background-color: $color-gray;
+  border-radius: 100px;
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-one {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-primary;
+  display: inline-block;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: $color-primary;
+    width: 40%;
+    height: 3px;
+  }
+}
+.title-two {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-primary;
+  display: block;
+  width: 300px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  p {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 10px 0;
+    color: $color-gray;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 30%;
+    background-color: $color-primary;
+    width: 40%;
+    height: 3px;
+  }
+}
+
+.card__testimonials {
+  width: 80%;
+  margin: 0 auto;
+  .card__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+  .card__name {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 400;
+  }
+  .card__des {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    color: #4d4d4d;
+    line-height: 40px;
+  }
+}
+.card__blog {
+  .card__bady {
+    div {
+      padding: 10px 0;
+    }
+  }
+  .card__image {
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  .card__title {
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 400;
+  }
+  .card__des {
+    line-height: 25px;
+  }
+  .card__date {
+    a {
+      color: $color-primary;
+    }
+    color: $color-gray;
+    span {
+      color: black;
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+}
+
+
+@media (max-width : 768px) {
+    .card {
+      .card_image{
+        height: 300px;
+      }
+    }
+    .card-one{
+      flex-direction: column;
+      .card_image{
+        width: 100%;
+      }
+      .card__body{
+        width: 100%;
+      }
+    }
+} 
+@media (max-width : 500px) {
+    .card {
+      .card_image{
+        height: 150px;
+      }
+    }
+} 
